@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+
+@import settings
+@import header
+@import profile
+@import navbar
+
+
+
+body
+    margin: 0 auto
+    overflow-y: scroll
+    width: calc( 100% + 20px )
+    min-height: 100vh
+    background: #ffffff
+    max-width: 100%
+    min-width: 300px
+    font-family: 'Montserrat', 'Arial', sans-serif
+    background-image: url('../img/desktop_bg.jpg')
+    background-repeat: repeat
+
+.app-wrapper
+    margin: 0 auto
+    max-width: 1200px
+    padding: 0 25px
+
+.app-content
+    display: flex
+    @media screen and ( max-width: 575px )
+        flex-wrap: wrap

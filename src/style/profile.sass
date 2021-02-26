@@ -1,0 +1,185 @@
+textarea
+    resize: none
+    width: 100% 
+    padding: 15px
+    margin: 0 15px 15px 0
+    border-radius: 4px
+    border: 0
+    outline: none
+    box-shadow: inset 0 0 7px rgba(0,0,0,.1)
+.content
+    height: calc( 100vh - 130px )
+    flex: 0 0 80%
+    max-width: 80%
+    @media screen and ( max-width: 575px )
+        flex: 0 0 100%
+        max-width: 100%
+    &__picture
+        height: auto
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+.posts    
+    &__item
+        border-radius: 5px
+        margin-bottom: 15px
+        display: flex
+        align-items: center
+        
+        &-img 
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            overflow: hidden
+            margin-right: 10px
+            img 
+                max-width: 100%
+.like-ico 
+    display: flex
+    align-items: bottom
+    font-size: 12px
+    font-weight: bold
+    margin-top: 7px
+    img
+        width: 12px 
+
+/***Message***/
+.dialogs
+    position: relative
+    display: flex
+    flex-direction: column
+    height: 100%
+    overflow: hidden
+    &__d-items
+        flex: 0 0 170px
+        max-width: 170px  
+        overflow-y: scroll
+        margin-right: -18px  
+        @media screen and ( max-width: 768px )
+            flex: 0 0 100%
+            max-width: 100% 
+            height: auto
+
+    &__messages 
+        flex-grow: 1                           
+        overflow: hidden        
+        overflow-y: scroll
+        margin-right: -18px  
+        padding-right: 3px
+        background-image: url(../img/messages-bg.png)
+        @media screen and ( max-width: 768px )
+            height: 100%
+            padding-bottom: 170px
+        @media screen and ( max-width: 575px )
+            max-width: 100%
+        &__scroll        
+            padding: 20px 5px
+            min-height: 100%
+            @media screen and ( max-width: 768px )
+                height: 100
+
+    &__inner
+        display: flex
+        flex: 1 1 auto
+        height: calc( 100vh - 130px )
+        padding-bottom: 170px
+        @media screen and ( max-width: 768px )
+            flex-wrap: wrap
+
+.dialogs__scroll__item
+    min-height: 100%
+    padding: 20px 15px 
+    background: rgba(white ,0.5 )
+    @media screen and ( max-width: 768px )
+        min-height: auto
+
+.dialogs__add
+    padding: 20px
+    background-color: rgba(gray, 0.3)
+    position: absolute
+    width: 100%
+    left: 0
+    bottom: 0
+    height: 170px
+    @media screen and ( max-width: 575px )
+        position: fixed
+        background-color: gray
+.messages         
+    &__item
+        background: #fff
+        border-radius: 9px
+        margin-bottom: 12px
+        padding: 12px 9px
+        font-size: 14px
+        font-weight: 500 
+        width: fit-content
+        position: relative
+        margin-left: 15px
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            bottom: 7px
+            right: 100%
+            width: 17px
+            height: 15px
+            background-image: url(../img/message-arrow.png)
+            background-size: cover
+            background-repeat: no-repeat
+                            
+.d-items__item
+    font-size: 14px
+    display: flex
+    align-items: center
+    margin-bottom: 10px
+    color: rgba(black, 0.5)
+    .active
+        text-shadow: 0 0 2px rgba(black, 0.5)
+        color: rgba(black, 1)
+        font-size: 15px
+    &__ico 
+        width: 25px
+        height: 25px    
+        margin-right: 5px
+
+
+
+
+//-----question----//
+.question
+    display: flex
+    flex-direction: column
+    height: 100%
+    overflow: hidden
+    position: relative
+    &__inner
+        padding: 20px 28px 20px 10px
+        background: rgba(#B0E0E6, 0.5)
+        display: flex
+        flex-direction: column
+        // flex: 1 1 auto
+        height: calc(100% - 170px)
+        overflow-y: scroll
+        margin-right: -18px
+        //padding-right: 18px
+.questions__item
+    border: solid 1px rgba(#333333 , 0.2 )
+    border-radius: 5px
+    padding: 15px 5px
+    margin: 20px 0
+    background: antiquewhite
+
+.question__add
+    background-color: rgba(gray, 0.3)
+    padding: 20px
+    position: absolute
+    width: 100%
+    left: 0
+    bottom: 0
+    height: 170px
+    @media screen and ( max-width: 575px )
+        position: fixed
+        background-color: rgba(gray, 1)
+
+
