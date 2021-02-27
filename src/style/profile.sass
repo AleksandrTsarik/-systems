@@ -52,8 +52,8 @@ textarea
     height: 100%
     overflow: hidden
     &__d-items
-        flex: 0 0 170px
-        max-width: 170px  
+        flex: 0 0 250px
+        max-width: 250px  
         overflow-y: scroll
         margin-right: -18px  
         @media screen and ( max-width: 768px )
@@ -88,9 +88,8 @@ textarea
             flex-wrap: wrap
 
 .dialogs__scroll__item
-    min-height: 100%
-    padding: 20px 15px 
-    background: rgba(white ,0.5 )
+    min-height: 100%    
+    background: rgba(white ,0.1)
     @media screen and ( max-width: 768px )
         min-height: auto
 
@@ -131,17 +130,39 @@ textarea
 .d-items__item
     font-size: 14px
     display: flex
-    align-items: center
-    margin-bottom: 10px
-    color: rgba(black, 0.5)
-    .active
-        text-shadow: 0 0 2px rgba(black, 0.5)
-        color: rgba(black, 1)
-        font-size: 15px
+    align-items: center    
+    color: rgba(black, 0.5)  
+    transition: 0.3s  
+    .active 
+        background-color: #fff
+        cursor: default 
+    &:hover
+        background-color: rgba(gray , 0.1 )
     &__ico 
-        width: 25px
-        height: 25px    
+        flex: 0 0 30px
+        max-width: 30px
+        height: 30px   
         margin-right: 5px
+        border-radius: 50%
+        overflow: hidden
+    &-box 
+        display: flex 
+        align-items: center
+        padding: 13px 7px 13px
+        width: 100%
+        &-info 
+            flex-grow: 1
+    & span
+        font-size: 13px
+        color: #000
+        font-weight: 700
+        overflow: hidden
+        white-space: nowrap
+        margin-top: -3px   
+    & i 
+        font-style: normal
+        color: #777
+        font-size: 12px        
 
 
 

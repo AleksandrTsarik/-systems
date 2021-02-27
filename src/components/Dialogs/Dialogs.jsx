@@ -28,7 +28,7 @@ const Dialogs = (props) => {
         
         // Получили список диалогов
         dialogElements.push(
-            <DialogItem name={d.name} id={d.id} />
+            <DialogItem name={d.name} id={d.id} ava={d.ava} />
         );        
         return dialogElements;
     });  
@@ -42,6 +42,8 @@ const Dialogs = (props) => {
         ) 
     } 
 
+    console.log(messageElements)
+
     return (
         <BrowserRouter>
         <div className="dialogs">
@@ -51,7 +53,7 @@ const Dialogs = (props) => {
                         { dialogElements }
                     </div>                    
                 </div>
-                <div className="dialogs__messages">
+                <div className="dialogs__messages">                    
                     { messageElements } 
                 </div>
             </div>

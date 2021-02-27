@@ -6,9 +6,11 @@ const UPDATE_NEW_QUSTIONS_TEXT = 'UPDATE-NEW-QUSTIONS-TEXT';
 let store = { 
   _state: {
     dialogsData: [
-      {id: 1, name: 'Саша'},
-      {id: 2, name: 'Женя'},
-      {id: 3, name: 'Дима'}
+      {id: 1, name: 'Саша', ava: '/img/Sasha.jpeg'},
+      {id: 2, name: 'Женя', ava: '/img/Jenya.jpg'},
+      {id: 3, name: 'Дима', ava: '/img/Dima.jpg'},
+      {id: 4, name: 'Максим', ava: '/img/maksim.jpg'},
+      // {id: 5, name: 'Запидрищенко Лариса', ava: ''}
     ],
 
     messagesPage: {
