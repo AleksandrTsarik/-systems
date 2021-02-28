@@ -54,8 +54,7 @@ textarea
     &__d-items
         flex: 0 0 250px
         max-width: 250px  
-        overflow-y: scroll
-        margin-right: -18px  
+        overflow-y: scroll        
         @media screen and ( max-width: 768px )
             flex: 0 0 100%
             max-width: 100% 
@@ -136,6 +135,7 @@ textarea
             background-repeat: no-repeat
                             
 .d-items__item
+    position: relative
     font-size: 14px
     display: flex
     align-items: center    
@@ -168,9 +168,22 @@ textarea
         white-space: nowrap
         margin-top: -3px   
     & i 
+        display: block   
         font-style: normal
         color: #777
-        font-size: 12px        
+        font-size: 11px    
+        max-width: 135px
+        overflow: hidden
+        white-space: nowrap
+    & em 
+        font-style: normal
+        font-weight: 700
+        color: #333
+        font-size: 8px    
+        position: absolute   
+        right: 8px
+        bottom: 14px 
+        
 
 
 

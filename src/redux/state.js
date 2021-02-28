@@ -17,7 +17,7 @@ let store = {
 
     messagesPage: {
       messagesData: [
-        {id: 1, message: 'Hi', user_id: "1", date: "1614470216"},
+        {id: 1, message: 'Hi', user_id: "1", date: "1614509997"},
         {id: 2, message: 'Hello', user_id: "1", date: "1614470336"},
         {id: 3, message: 'yo', user_id: "1", date: "1614472436"},
         {id: 4, message: 'Привет', user_id: "2", date: "1614472676"},
