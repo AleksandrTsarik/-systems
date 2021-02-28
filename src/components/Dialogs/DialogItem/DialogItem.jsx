@@ -13,6 +13,8 @@ const DialogItem = (props) => {
         css = 'opacity: 0.5;'
     }    
 
+    console.log(props.mess)
+
     return (
         <div>
             <div className="d-items__item">

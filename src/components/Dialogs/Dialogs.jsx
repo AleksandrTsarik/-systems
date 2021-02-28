@@ -17,10 +17,9 @@ const Dialogs = (props) => {
     let dialogElements = [];   
     let dialogs = {}; 
 
-    props.dialogsData.forEach((d, i) => {
+    props.dialogsData.forEach((d) => {
         dialogs[d.id] = [];
-        props.messagesData.forEach((m, index) => {
-            //let path = "path_" + d.id;
+        props.messagesData.forEach((m) => {            
             if(d.id == m.user_id) {
                 dialogs[d.id].push(m);
             }                
@@ -28,7 +27,7 @@ const Dialogs = (props) => {
         
         // Получили список диалогов
         dialogElements.push(
-            <DialogItem name={d.name} id={d.id} ava={d.ava} />
+            <DialogItem name={d.name} id={d.id} ava={d.ava} mess={dialogs[d.id]} />
         );        
         return dialogElements;
     });  
@@ -41,8 +40,6 @@ const Dialogs = (props) => {
             <Route path={path} render={ () => <MessagesList messages={dialogs[e]} /> } />            
         ) 
     } 
-
-    console.log(messageElements)
 
     return (
         <BrowserRouter>

@@ -17,15 +17,15 @@ let store = {
 
     messagesPage: {
       messagesData: [
-        {id: 1, message: 'Hi', user_id: "1"},
-        {id: 2, message: 'Hello', user_id: "1"},
-        {id: 3, message: 'yo', user_id: "1"},
-        {id: 4, message: 'Привет', user_id: "2"},
-        {id: 5, message: 'Как дела?', user_id: "2"},
-        {id: 6, message: 'до встречи', user_id: "2"}, 
-        {id: 7, message: 'lorem1', user_id: "3"},
-        {id: 8, message: 'lorem1', user_id: "3"},
-        {id: 9, message: 'lorem1', user_id: "3"},  
+        {id: 1, message: 'Hi', user_id: "1", date: "1614470216"},
+        {id: 2, message: 'Hello', user_id: "1", date: "1614470336"},
+        {id: 3, message: 'yo', user_id: "1", date: "1614472436"},
+        {id: 4, message: 'Привет', user_id: "2", date: "1614472676"},
+        {id: 5, message: 'Как дела?', user_id: "2", date: "1614472676"},
+        {id: 6, message: 'до встречи', user_id: "2", date: "1614472797"}, 
+        {id: 7, message: 'lorem1', user_id: "3", date: "1614473697"},
+        {id: 8, message: 'lorem1', user_id: "3", date: "1614473877"},
+        {id: 9, message: 'lorem1', user_id: "3", date: "1614473997"},  
       ],
       newMessageText: 'Напиши что ни будь'
     },
@@ -55,10 +55,12 @@ let store = {
     if (action.type === "ADD-POST") {
       let currentUrl = window.location.href;        
       let arrayId = currentUrl.split('/').reverse();
+      let dateMessage = Math.floor(Date.now() / 1000);
       let newMessage = {
         id: this._state.messagesPage.messagesData.length+1,
         message: this._state.messagesPage.newMessageText,
-        user_id: arrayId[0]
+        user_id: arrayId[0],
+        date: dateMessage
       };  
       if(newMessage.message !== '') {      
         this._state.messagesPage.messagesData.push(newMessage);

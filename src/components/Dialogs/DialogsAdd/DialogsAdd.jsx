@@ -7,7 +7,7 @@ const DialogsAdd = (props) => {
     let newPostElement = React.createRef();
 
     let addMessage = () => {
-        let text = newPostElement.current.value;
+        //let text = newPostElement.current.value;
         props.dispatch(addPostActionCreator());        
     }
     let onPostChange = () => {
