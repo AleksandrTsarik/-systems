@@ -87,6 +87,20 @@ let store = {
   }
 }
 
+
+export const timeConverter = (UNIX_timestamp) => {
+  let a = new Date(UNIX_timestamp * 1000);
+  let months = ['01','02','03','04','05','06','07','08','09','10','11','12'];
+  let year = a.getFullYear();
+  let month = months[a.getMonth()];
+  let date = a.getDate();
+  let hour = a.getHours();
+  let min = a.getMinutes();
+  let sec = a.getSeconds();
+  let time = date + '.' + month + '.' + year + ' ' + hour + ':' + min;
+  return time;
+}
+
 export const addPostActionCreator = () => ({type: 'ADD-POST'});
 export const updateNewPostTextActionCreator = (text) => ({type: 'UPDATE-NEW-POST-TEXT', newText: text});
 export const addQuestionsActionCreator = () => ({type: 'ADD-QUSTIONS'});
