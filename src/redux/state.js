@@ -10,9 +10,8 @@ let store = {
       {id: 2, name: 'Женя', ava: '/img/Jenya.jpg'},
       {id: 3, name: 'Дима', ava: '/img/Dima.jpg'},
       {id: 4, name: 'Максим', ava: ''},
-      {id: 5, name: 'Запидрищенко Лариса', ava: ''},
-      {id: 6, name: 'Евлампий', ava: ''},
-      {id: 7, name: 'Иннокентий Шниперсон', ava: ''}
+      {id: 5, name: 'Евлампий', ava: ''},
+      {id: 6, name: 'Иннокентий Шниперсон', ava: ''}
     ],
 
     messagesPage: {
