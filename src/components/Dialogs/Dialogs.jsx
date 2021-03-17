@@ -1,6 +1,4 @@
 import React from "react";
-// import ReactDOM from "react-dom";
-//import { NavLink } from "react-router-dom";
 import DialogItem from "./DialogItem/DialogItem";
 import DialogsAdd from "./DialogsAdd/DialogsAdd";
 import Message from "./Message/Message";
